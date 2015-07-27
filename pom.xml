@@ -18,8 +18,8 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <upstream.version>2.1.0</upstream.version>
-        <upstream.url>https://github.com/wordnik/swagger-ui/archive/v${upstream.version}.zip</upstream.url>
+        <upstream.version>2.1.1</upstream.version>
+        <upstream.url>https://github.com/swagger-api/swagger-ui/archive/v${upstream.version}.zip</upstream.url>
         <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${upstream.version}</destDir>
         <requirejs>
             {
@@ -39,7 +39,7 @@
     <licenses>
         <license>
             <name>Apache 2.0</name>
-            <url>https://github.com/wordnik/swagger-ui</url>
+            <url>https://github.com/swagger-api/swagger-ui</url>
             <distribution>repo</distribution>
         </license>
     </licenses>
