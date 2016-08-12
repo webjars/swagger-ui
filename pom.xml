@@ -11,16 +11,15 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>swagger-ui</artifactId>
-    <version>2.1.6-SNAPSHOT</version>
+    <version>2.2.0-SNAPSHOT</version>
     <name>Swagger UI</name>
     <description>WebJar for Swagger UI</description>
     <url>http://webjars.org</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <upstream.version>2.1.5</upstream.version>
-        <upstream.url>https://github.com/swagger-api/swagger-ui/archive/v${upstream.version}.zip</upstream.url>
-        <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${upstream.version}</destDir>
+        <upstream.url>https://github.com/swagger-api/swagger-ui/archive/v${version.unsnapshot}.zip</upstream.url>
+        <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${project.version}</destDir>
         <requirejs>
             {
                 "paths": { "swagger-ui": "swagger-ui" }
@@ -54,6 +53,20 @@
     <build>
         <plugins>
             <plugin>
+                <groupId>com.jamesward</groupId>
+                <artifactId>unsnapshot-maven-plugin</artifactId>
+                <version>0.2</version>
+                <executions>
+                    <execution>
+                        <phase>initialize</phase>
+                        <goals>
+                            <goal>unsnapshot</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
                 <artifactId>maven-antrun-plugin</artifactId>
                 <version>1.8</version>
                 <executions>
@@ -68,7 +81,7 @@
                                 <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}" />
                                 <echo message="moving resources" />
                                 <move todir="${destDir}">
-                                    <fileset dir="${project.build.directory}/swagger-ui-${upstream.version}/dist" />
+                                    <fileset dir="${project.build.directory}/swagger-ui-${version.unsnapshot}/dist" />
                                 </move>
                             </target>
                         </configuration>
