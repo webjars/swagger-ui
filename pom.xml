@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>swagger-ui</artifactId>
-    <version>3.13.7-SNAPSHOT</version>
+    <version>3.14.0-SNAPSHOT</version>
     <name>Swagger UI</name>
     <description>WebJar for Swagger UI</description>
     <url>http://webjars.org</url>
