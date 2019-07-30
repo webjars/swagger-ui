@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>swagger-ui</artifactId>
-    <version>3.23.2</version>
+    <version>3.23.3-SNAPSHOT</version>
     <name>Swagger UI</name>
     <description>WebJar for Swagger UI</description>
     <url>http://webjars.org</url>
@@ -47,7 +47,7 @@
         <url>http://github.com/webjars/swagger-ui</url>
         <connection>scm:git:https://github.com/webjars/swagger-ui.git</connection>
         <developerConnection>scm:git:https://github.com/webjars/swagger-ui.git</developerConnection>
-        <tag>swagger-ui-3.23.2</tag>
+        <tag>HEAD</tag>
     </scm>
     
     <build>
